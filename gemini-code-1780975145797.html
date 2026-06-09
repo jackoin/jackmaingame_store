@@ -343,6 +343,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            cursor: pointer;
         }
 
         .btn-sm:hover {
@@ -820,7 +821,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Siap Tempur Divisi/Event</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="javascript:void(0)" onclick="sendWhatsApp('argentina')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <button onclick="sendWhatsApp('argentina')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</button>
                     </div>
                 </div>
 
@@ -836,7 +837,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Akun Fresh & Bersih</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="javascript:void(0)" onclick="sendWhatsApp('france')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <button onclick="sendWhatsApp('france')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</button>
                     </div>
                 </div>
 
@@ -852,7 +853,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Aman Bind ke Konami ID Baru</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="javascript:void(0)" onclick="sendWhatsApp('england')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <button onclick="sendWhatsApp('england')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</button>
                     </div>
                 </div>
 
@@ -868,7 +869,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Skuad Portugal '26 Premium</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="javascript:void(0)" onclick="sendWhatsApp('portugal')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <button onclick="sendWhatsApp('portugal')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</button>
                     </div>
                 </div>
             </div>
@@ -914,7 +915,7 @@
     <footer>
         <div class="container">
             <div class="footer-socials">
-                <a href="https://wa.me/qr/SOGQIOWEQPLPG1" class="social-icon" target="_blank" title="Chat WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.me/62895381038212" class="social-icon" target="_blank" title="Chat WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
             <p>&copy; 2026 NationStore eFootball. All Rights Reserved.</p>
             <p style="font-size: 12px; margin-top: 10px; opacity: 0.5;">Disclaimer: Kami tidak berafiliasi dengan Konami Digital Entertainment.</p>
@@ -924,18 +925,76 @@
     <script>
         // WhatsApp Message Templates
         const whatsappMessages = {
-            argentina: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇦🇷 *ARGENTINA [BEST SELLER]*%0A%0A📝 Deskripsi:%0AAkun fresh dioptimalkan dengan Premium Skuad Argentina Full Booster.%0A%0A✨ Fitur:%0A✓ 2.000+ Koin Terpakai (Pack)%0A✓ Full Skuad Booster Argentina%0A✓ Siap Tempur Divisi/Event%0A%0A💰 Berapa harganya? Apakah masih ada stok?`,
+            argentina: `Halo Admin! 👋
+
+Saya tertarik dengan produk:
+
+🇦🇷 ARGENTINA [BEST SELLER]
+
+📝 Deskripsi:
+Akun fresh dioptimalkan dengan Premium Skuad Argentina Full Booster.
+
+✨ Fitur:
+✓ 2.000+ Koin Terpakai (Pack)
+✓ Full Skuad Booster Argentina
+✓ Siap Tempur Divisi/Event
+
+💰 Berapa harganya? Apakah masih ada stok?`,
             
-            france: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇫🇷 *FRANCE PACK [HOT]*%0A%0A📝 Deskripsi:%0AAkun berisikan skuad elit Prancis dengan pemain berkecepatan tinggi.%0A%0A✨ Fitur:%0A✓ Premium France Pack Unlocked%0A✓ Komposisi Pemain Meta Gacor%0A✓ Akun Fresh & Bersih%0A%0A💰 Berapa harganya? Apakah masih ada stok?`,
+            france: `Halo Admin! 👋
+
+Saya tertarik dengan produk:
+
+🇫🇷 FRANCE PACK [HOT]
+
+📝 Deskripsi:
+Akun berisikan skuad elit Prancis dengan pemain berkecepatan tinggi.
+
+✨ Fitur:
+✓ Premium France Pack Unlocked
+✓ Komposisi Pemain Meta Gacor
+✓ Akun Fresh & Bersih
+
+💰 Berapa harganya? Apakah masih ada stok?`,
             
-            england: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇬🇧 *ENGLAND PACK [READY]*%0A%0A📝 Deskripsi:%0ASkuad bertabur bintang liga Inggris dengan rating maksimal yang stabil.%0A%0A✨ Fitur:%0A✓ Premium England Pack Unlocked%0A✓ Skuad Solid Fisik & Teknik%0A✓ Aman Bind ke Konami ID Baru%0A%0A💰 Berapa harganya? Apakah masih ada stok?`,
+            england: `Halo Admin! 👋
+
+Saya tertarik dengan produk:
+
+🇬🇧 ENGLAND PACK [READY]
+
+📝 Deskripsi:
+Skuad bertabur bintang liga Inggris dengan rating maksimal yang stabil.
+
+✨ Fitur:
+✓ Premium England Pack Unlocked
+✓ Skuad Solid Fisik & Teknik
+✓ Aman Bind ke Konami ID Baru
+
+💰 Berapa harganya? Apakah masih ada stok?`,
             
-            portugal: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇵🇹 *PORTUGAL '26 [HOT]*%0A%0A📝 Deskripsi:%0AAkun premium dengan Cristiano Ronaldo (CF) & Player Skill "Will Power".%0A%0A✨ Fitur:%0A✓ Cristiano Ronaldo (CF) Featured%0A✓ Skill Spesial "Will Power" Unlocked%0A✓ Skuad Portugal '26 Premium%0A%0A💰 Berapa harganya? Apakah masih ada stok?`
+            portugal: `Halo Admin! 👋
+
+Saya tertarik dengan produk:
+
+🇵🇹 PORTUGAL '26 [HOT]
+
+📝 Deskripsi:
+Akun premium dengan Cristiano Ronaldo (CF) & Player Skill "Will Power".
+
+✨ Fitur:
+✓ Cristiano Ronaldo (CF) Featured
+✓ Skill Spesial "Will Power" Unlocked
+✓ Skuad Portugal '26 Premium
+
+💰 Berapa harganya? Apakah masih ada stok?`
         };
 
         function sendWhatsApp(product) {
             const message = whatsappMessages[product];
-            const whatsappURL = `https://wa.me/qr/SOGQIOWEQPLPG1?text=${message}`;
+            const phoneNumber = '62895381038212';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             window.open(whatsappURL, '_blank');
         }
 
