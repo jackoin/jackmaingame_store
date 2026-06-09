@@ -808,6 +808,7 @@
         <div class="container">
             <h2 class="section-title">Katalog Akun Premium</h2>
             <div class="catalog-grid">
+                <!-- ARGENTINA PACK -->
                 <div class="product-card">
                     <div class="product-img-placeholder"><i class="fa-solid fa-ranking-star"></i></div>
                     <div class="product-info">
@@ -819,9 +820,11 @@
                             <li><i class="fa-solid fa-circle-check"></i> Siap Tempur Divisi/Event</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="https://wa.me/qr/SOGQIOWEQPLPG1" class="btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <a href="javascript:void(0)" onclick="sendWhatsApp('argentina')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
                     </div>
                 </div>
+
+                <!-- FRANCE PACK -->
                 <div class="product-card">
                     <div class="product-img-placeholder"><i class="fa-solid fa-ranking-star"></i></div>
                     <div class="product-info">
@@ -833,9 +836,11 @@
                             <li><i class="fa-solid fa-circle-check"></i> Akun Fresh & Bersih</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="https://wa.me/qr/SOGQIOWEQPLPG1" class="btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <a href="javascript:void(0)" onclick="sendWhatsApp('france')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
                     </div>
                 </div>
+
+                <!-- ENGLAND PACK -->
                 <div class="product-card">
                     <div class="product-img-placeholder"><i class="fa-solid fa-ranking-star"></i></div>
                     <div class="product-info">
@@ -847,9 +852,11 @@
                             <li><i class="fa-solid fa-circle-check"></i> Aman Bind ke Konami ID Baru</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="https://wa.me/qr/SOGQIOWEQPLPG1" class="btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <a href="javascript:void(0)" onclick="sendWhatsApp('england')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
                     </div>
                 </div>
+
+                <!-- PORTUGAL PACK -->
                 <div class="product-card">
                     <div class="product-img-placeholder"><i class="fa-solid fa-ranking-star"></i></div>
                     <div class="product-info">
@@ -861,7 +868,7 @@
                             <li><i class="fa-solid fa-circle-check"></i> Skuad Portugal '26 Premium</li>
                         </ul>
                         <div class="product-price">Hubungi Admin</div>
-                        <a href="https://wa.me/qr/SOGQIOWEQPLPG1" class="btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
+                        <a href="javascript:void(0)" onclick="sendWhatsApp('portugal')" class="btn-sm"><i class="fa-brands fa-whatsapp"></i> Tanyakan Stok</a>
                     </div>
                 </div>
             </div>
@@ -915,6 +922,23 @@
     </footer>
 
     <script>
+        // WhatsApp Message Templates
+        const whatsappMessages = {
+            argentina: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇦🇷 *ARGENTINA [BEST SELLER]*%0A%0A📝 Deskripsi:%0AAkun fresh dioptimalkan dengan Premium Skuad Argentina Full Booster.%0A%0A✨ Fitur:%0A✓ 2.000+ Koin Terpakai (Pack)%0A✓ Full Skuad Booster Argentina%0A✓ Siap Tempur Divisi/Event%0A%0A💰 Berapa harganya? Apakah masih ada stok?`,
+            
+            france: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇫🇷 *FRANCE PACK [HOT]*%0A%0A📝 Deskripsi:%0AAkun berisikan skuad elit Prancis dengan pemain berkecepatan tinggi.%0A%0A✨ Fitur:%0A✓ Premium France Pack Unlocked%0A✓ Komposisi Pemain Meta Gacor%0A✓ Akun Fresh & Bersih%0A%0A💰 Berapa harganya? Apakah masih ada stok?`,
+            
+            england: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇬🇧 *ENGLAND PACK [READY]*%0A%0A📝 Deskripsi:%0ASkuad bertabur bintang liga Inggris dengan rating maksimal yang stabil.%0A%0A✨ Fitur:%0A✓ Premium England Pack Unlocked%0A✓ Skuad Solid Fisik & Teknik%0A✓ Aman Bind ke Konami ID Baru%0A%0A💰 Berapa harganya? Apakah masih ada stok?`,
+            
+            portugal: `Halo Admin! 👋%0A%0ASaya tertarik dengan produk:%0A%0A🇵🇹 *PORTUGAL '26 [HOT]*%0A%0A📝 Deskripsi:%0AAkun premium dengan Cristiano Ronaldo (CF) & Player Skill "Will Power".%0A%0A✨ Fitur:%0A✓ Cristiano Ronaldo (CF) Featured%0A✓ Skill Spesial "Will Power" Unlocked%0A✓ Skuad Portugal '26 Premium%0A%0A💰 Berapa harganya? Apakah masih ada stok?`
+        };
+
+        function sendWhatsApp(product) {
+            const message = whatsappMessages[product];
+            const whatsappURL = `https://wa.me/qr/SOGQIOWEQPLPG1?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
